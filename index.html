@@ -12,7 +12,63 @@
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<style type="text/css">
 
+    #reader-wrapper {
+  border: 1px solid black;
+  border-left: 0;
+  border-right: 0;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  margin: 20px auto;
+  text-align: center;
+}
+#mark {
+  border-left: 1px solid black;
+  height: 50px;
+  width: 1px;
+  position: relative;
+  float: left;
+  left: 49%;
+}
+#reader {
+  position: relative;
+  margin-top: 10px;
+  background-color: white;
+  top: 13px;
+}
+#reader b {
+  color: red;
+  font-weight: normal;
+}
+#speed-wrapper {
+  width: 250px;
+  margin: 10px auto;
+}
+#link {
+  text-align: center;
+}
+
+#text {
+  margin: 20px auto;
+  width: 300px;
+  height: 200px;
+  display: block;
+}
+#start, #stop, #restart, #getWiki, #wikititle {
+  margin: 0 auto;
+  display: block;
+}
+
+#wikititle {
+  width : 80%;
+}
+
+#reader-wrapper {
+  color: black;
+}
+  </style>
   </head>
   <body>
 
@@ -41,6 +97,26 @@
       <section>
         <h1>
 <a name="spritzreading" class="anchor" href="#spritzreading"><span class="octicon octicon-link"></span></a>spritzReading</h1>
+
+<div id="reader-wrapper"><div id="mark"></div><span id="reader"></span></div>
+Add here wikipedia title:<input type="text" id="wikititle" value="Malaysia_Airlines_Flight_370" />
+<button id="getWiki">Get Wiki Article</button>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+<button id="restart">Restart</button>
+<div id="speed-wrapper">
+  Reading speed: 
+  <select id="read-speed">
+    <option value="100">Thunder</option>
+    <option value="150">Blazing fast</option>
+    <option value="200">Really fast</option>
+    <option value="300" selected>Fast</option>
+    <option value="400">Slow</option>
+    <option value="450">Really slow</option>
+  </select>
+</div>
+<div id="link">Only works with Chrome<br>Inspired by: <a href="http://www.spritzinc.com/" target="_blank">www.spritzinc.com</a> user code from <a href="http://codepen.io/ajimix/pen/zEdaL">http://codepen.io/ajimix/pen/zEdaL</a></div>
+<script type="text/javascript" src="javascripts/wiki.js"></script>
 
 <p>This project is an to acknowledge the awesome spritz reading method. If spritzinc.com is not happy with this liddle project, please contact me and I will close it. :D</p>
 
